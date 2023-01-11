@@ -17,6 +17,7 @@ def has_close_elements(numbers: List[float], threshold: float) -> bool:
 
 
 
+
 def separate_paren_groups(paren_string: str) -> List[str]:
     """ Input to this function is a string containing multiple groups of nested parentheses. Your goal is to
     separate those group into separate strings and return the list of those.
@@ -25,7 +26,8 @@ def separate_paren_groups(paren_string: str) -> List[str]:
     >>> separate_paren_groups('( ) (( )) (( )( ))')
     ['()', '(())', '(()())']
     """
-    
+
+
 
 
 
@@ -2856,6 +2858,7 @@ def do_algebra(operator, operand):
         Operator list has at least one operator, and operand list has at least two operands.
 
     """
+    
 
 
 
@@ -2877,6 +2880,7 @@ def solve(s):
 
 
 
+
 def string_to_md5(text):
     """
     Given a string 'text', return its md5 hash equivalent string.
@@ -2884,6 +2888,7 @@ def string_to_md5(text):
 
     >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'
     """
+
 
 
 

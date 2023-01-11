@@ -2791,7 +2791,35 @@ def find_max(words):
     find_max(["name", "enam", "game"]) == "enam"
     find_max(["aaaaaaa", "bb" ,"cc"]) == ""aaaaaaa"
     """
-    
+    counter = {}
+    for i in words:
+        if i in counter:
+            counter[i] += 1
+        else:
+            counter[i] = 1
+    return max(counter, key=counter.get)
+
+
+
+
+
+def find_max_replace(words):
+    """Write a function that accepts a list of strings.
+    The list contains different words. Return the word with maximum number
+    of unique characters. If multiple strings have maximum number of unique
+    characters, return the one which comes first in lexicographical order.
+
+    find_max_replace(["name", "of", "string"]) == "string"
+    find_max_replace(["name", "enam", "game"]) == "enam"
+    find_max_replace(["aaaaaaa", "bb","cc"]) == "aaaaaaa"
+    """
+    counter = {}
+    for i in words:
+        if i in counter:
+            counter[i] += 1
+        else:
+            counter[i] = 1
+
 
 
 
