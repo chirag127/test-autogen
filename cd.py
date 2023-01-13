@@ -10,6 +10,10 @@ def has_close_elements(numbers: List[float], threshold: float) -> bool:
     True
     """
 
+    for i in range(len(numbers) - 1):
+        for j in range(i + 1, len(numbers)):
+            if abs(numbers[i] - numbers[j]) < threshold:
+                return True
 
 
 
@@ -31,6 +35,10 @@ def separate_paren_groups(paren_string: str) -> List[str]:
 
 
 
+
+
+
+
 def truncate_number(number: float) -> float:
     """ Given a positive floating point number, it can be decomposed into
     and integer part (largest integer smaller than given number) and decimals
@@ -40,6 +48,10 @@ def truncate_number(number: float) -> float:
     >>> truncate_number(3.5)
     0.5
     """
+
+
+
+    
 
 
 
@@ -2907,4 +2919,3 @@ def generate_integers(a, b):
     generate_integers(8, 2) => [2, 4, 6, 8]
     generate_integers(10, 14) => []
     """
-    
