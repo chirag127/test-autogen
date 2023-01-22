@@ -1,4 +1,6 @@
 {
-    "docify.intelligentDetection": true,
-    "docify.sidePanelReviewMode": true
+  "docify.intelligentDetection": true,
+  "docify.sidePanelReviewMode": true,
+  "editor.tabCompletion": "on",
+  "diffEditor.codeLens": true
 }
