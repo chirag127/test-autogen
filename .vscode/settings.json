@@ -2,5 +2,7 @@
   "docify.intelligentDetection": true,
   "docify.sidePanelReviewMode": true,
   "editor.tabCompletion": "on",
-  "diffEditor.codeLens": true
+  "diffEditor.codeLens": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "aiXcoder.showTrayIcon": true
 }

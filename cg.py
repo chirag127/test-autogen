@@ -2051,6 +2051,36 @@ def get_closest_vowel(word):
     get_closest_vowel("ab") ==> ""
     """
 
+    vowels = "aeiou"
+    vowels_count = 0
+    closest_vowel = ""
+    for vowel in vowels:
+        if vowel in word:
+            vowels_count += 1
+            if vowels_count == 1:
+                closest_vowel = vowel
+            else:
+                if word.index(vowel) < word.index(closest_vowel):
+                    closest_vowel = vowel
+
+    return closest_vowel
+
+
+
+
+def get_closest_consonant(word):
+    """You are given a word. Your task is to find the closest consonant that stands between
+    two vowels from the right side of the word (case sensitive).
+
+    Vowels in the beginning and ending doesn't count. Return empty string if you didn't
+    find any vowel met the above condition.
+
+    You may assume that the given string contains English letter only.
+    Example:
+    """
+
+
+
 
 
 
@@ -2070,6 +2100,12 @@ def match_parens(lst):
     match_parens(['()(', ')']) == 'Yes'
     match_parens([')', ')']) == 'No'
     '''
+
+    if len(lst) == 0:
+
+        return 'No'
+    if len(lst) == 1:
+        return 'Yes'
 
 
 
@@ -2104,6 +2140,72 @@ def maximum(arr, k):
 
 
 
+def maximum_subarray(arr, k):
+    """
+    Given an array arr of integers and a positive integer k, return a sorted list
+    of length k with the maximum k numbers in arr.
+
+    Example 1:
+
+        Input: arr = [-3, -4, 5], k = 3
+        Output: [-4, -3, 5]
+
+    Example 2:
+
+        Input: arr = [4, -4, 4], k = 2
+        Output: [4, 4]
+
+    Example 3:
+
+        Input: arr = [-3, 2, 1, 2, -1, -2, 1], k = 1
+        Output: [2]
+
+    Note:
+        1. The length of the array will be in the range of [1, 1000].
+        2. The elements in the array will be in the range of [-1000, 1000].
+        3. 0 <= k <= len(arr)
+    """
+
+
+
+
+def maximum_subarray
+
+
+
+
+
+
+def minimum(arr, k):
+    """
+    Given an array arr of integers and a positive integer k, return a sorted list
+    of length k with the minimum k numbers in arr.
+
+    Example 1:
+
+        Input: arr = [-3, -4, 5], k = 3
+        Output: [-4, -3, 5]
+
+    Example 2:
+
+        Input: arr = [4, -4, 4], k = 2
+        Output: [4, 4]
+
+    Example 3:
+
+        Input: arr = [-3, 2, 1, 2, -1, -2, 1], k = 1
+        Output: [2]
+
+    Note:
+        1. The length of the array will be in the range of [1, 1000].
+        2. The elements in the array will be in the range of [-1000, 1000].
+        3. 0 <= k <= len(arr)
+    """
+    # Your code
+
+
+
+
 
 def solution(lst):
     """Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.
@@ -2114,6 +2216,7 @@ def solution(lst):
     solution([3, 3, 3, 3, 3]) ==> 9
     solution([30, 13, 24, 321]) ==>0
     """
+
 
 
 
@@ -2133,6 +2236,8 @@ def add_elements(arr, k):
         1. 1 <= len(arr) <= 100
         2. 1 <= k <= len(arr)
     """
+
+        
 
 
 

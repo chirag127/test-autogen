@@ -10,13 +10,11 @@ def has_close_elements(numbers: List[float], threshold: float) -> bool:
     True
     """
 
-    for i in range(len(numbers) - 1):
+    for i in range(len(numbers)):
         for j in range(i + 1, len(numbers)):
             if abs(numbers[i] - numbers[j]) < threshold:
                 return True
-            else:
-
-                return False
+    return False
 
 
 
@@ -25,6 +23,38 @@ def has_close_elements(numbers: List[float], threshold: float) -> bool:
 
 
 
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    """ Input to this function is a string containing multiple groups of nested parentheses. Your goal is to
+    separate those group into separate strings and return the list of those.
+    Separate groups are balanced (each open brace is properly closed) and not nested within each other
+    Ignore any spaces in the input string.
+    >>> separate_paren_groups('( ) (( )) (( )( ))')
+    ['()', '(())', '(()())']
+    """
+
+    paren_stack = []
+    paren_groups = []
+    for char in paren_string:
+        if char == '(':
+            parenthesis_group = ''
+            paren_stack.append(char)
+        elif char == ')':
+            if len(paren_stack) == 0:
+                raise ValueError('Unbalanced parentheses')
+            paren_stack.pop()
+            parenthesis_group += char
+            paren_groups.append(parenthesis_group)
+        else:
+            parenthesis_group += char
+            paren_groups.append(parenthesis_group)
+            paren_groups.append(paren_stack)
+            return paren_groups
+
+            raise ValueError('Unbalanced parentheses')
+            return paren_groups
+
+            raise ValueError('Unbalanced parentheses')
 
 
 
@@ -40,9 +70,8 @@ def truncate_number(number: float) -> float:
     >>> truncate_number(3.5)
     0.5
     """
+
     return number - int(number)
-
-
 
 
 
@@ -60,12 +89,13 @@ def below_zero(operations: List[int]) -> bool:
     >>> below_zero([1, 2, -4, 5])
     True
     """
-    for i in range(len(operations)):
-        if operations[i] < 0:
-            return True
-        else:
-            return False
 
+    balance = 0
+    for operation in operations:
+        balance += operation
+        if balance < 0:
+            return True
+    return False
 
 
 
@@ -82,12 +112,9 @@ def mean_absolute_deviation(numbers: List[float]) -> float:
     >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])
     1.0
     """
+
     mean = sum(numbers) / len(numbers)
-    return sum([abs(x - mean) for x in numbers]) / len(numbers)
-
-
-
-
+    return sum(abs(x - mean) for x in numbers) / len(numbers)
 
 
 
@@ -99,9 +126,12 @@ def intersperse(numbers: List[int], delimeter: int) -> List[int]:
     >>> intersperse([1, 2, 3], 4)
     [1, 4, 2, 4, 3]
     """
-
-    return [numbers[i] for i in range(len(numbers))] + [delimeter] + [numbers[i] for i in range(len(numbers))]
-
+    result = []
+    for i, x in enumerate(numbers):
+        if i > 0:
+            result.append(delimeter)
+        result.append(x)
+    return result
 
 
 
@@ -117,8 +147,11 @@ def parse_nested_parens(paren_string: str) -> List[int]:
     >>> parse_nested_parens('(()()) ((())) () ((())()())')
     [2, 3, 1, 3]
     """
-    return [len(x) for x in paren_string.split()]
 
+    result = []
+    for group in paren_string.split(' '):
+        result.append(max(count_parens(group)))
+    return resulted
 
 
 
@@ -135,9 +168,7 @@ def filter_by_substring(strings: List[str], substring: str) -> List[str]:
     return [x for x in strings if substring in x]
 
 
-
-
-
+, Tuple
 
 
 def sum_product(numbers: List[int]) -> Tuple[int, int]:
@@ -148,12 +179,11 @@ def sum_product(numbers: List[int]) -> Tuple[int, int]:
     >>> sum_product([1, 2, 3, 4])
     (10, 24)
     """
-    return (sum(numbers), numbers[0] * numbers[1] * numbers[2] * numbers[3])
+
+    return sum(numbers), product(numbers)
 
 
-
-
-
+, Tuple
 
 
 def rolling_max(numbers: List[int]) -> List[int]:
@@ -162,20 +192,68 @@ def rolling_max(numbers: List[int]) -> List[int]:
     >>> rolling_max([1, 2, 3, 2, 3, 4, 2])
     [1, 2, 3, 3, 3, 4, 4]
     """
-    return [max(numbers[:i + 1]) for i in range(len(numbers))]
+
+    result = []
+    max_so_far = numbers[0]
+    for x in numbers:
+        if x > max_so_far:
+            max_so_far = x
+        result.append(max_so_far)
+    return result
 
 
 
 
 
-def is_palindrome(string: str) -> bool:
-    """ Test if given string is a palindrome """
-    return string == string[::-1]
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def make_palindrome(string: str) -> str:
+    """ Find the shortest palindrome that begins with a supplied string.
+    Algorithm idea is simple:
+    - Find the longest postfix of supplied string that is a palindrome.
+    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.
+    >>> make_palindrome('')
+    ''
+    >>> make_palindrome('cat')
+    'catac'
+    >>> make_palindrome('cata')
+    'catac'
+    """
+    if string == '':
+        return ''
+    else:
+        longest_postfix = find_longest_postfix(string)
+
+        if longest_postfix == '':
+            return string + string[::-1]
+            else:
+            return string + string[::-1][:len(longest_postfix
 
 def string_xor(a: str, b: str) -> str:
     """ Input are two strings a and b consisting only of 1s and 0s.
@@ -183,9 +261,11 @@ def string_xor(a: str, b: str) -> str:
     >>> string_xor('010', '110')
     '100'
     """
-    return ''.join([str(int(x) ^ int(y)) for x, y in zip(a, b)])
 
 
+
+
+, Optional
 
 
 def longest(strings: List[str]) -> Optional[str]:
@@ -198,9 +278,6 @@ def longest(strings: List[str]) -> Optional[str]:
     >>> longest(['a', 'bb', 'ccc'])
     'ccc'
     """
-    if len(strings) == 0:
-        return None
-    return max(strings, key=len)
 
 
 
@@ -214,17 +291,6 @@ def greatest_common_divisor(a: int, b: int) -> int:
     >>> greatest_common_divisor(25, 15)
     5
     """
-    while a != 0 and b != 0:
-        if a > b:
-            a = a % b
-        else:
-            b = b % a
-    return a + b
-
-
-
-
-
 
 
 
@@ -237,10 +303,6 @@ def all_prefixes(string: str) -> List[str]:
     >>> all_prefixes('abc')
     ['a', 'ab', 'abc']
     """
-
-    return [string[:i] for i in range(len(string))]
-
-
 
 
 
@@ -255,7 +317,7 @@ def string_sequence(n: int) -> str:
     '0 1 2 3 4 5'
     """
 
-    return ' '.join([str(i) for i in range(n + 1)])
+
 
 
 
@@ -268,7 +330,7 @@ def count_distinct_characters(string: str) -> int:
     4
     """
 
-    return len(set(string.lower()))
+
 
 
 
@@ -287,14 +349,7 @@ def parse_music(music_string: str) -> List[int]:
     >>> parse_music('o o| .| o| o| .| .| .| .| o o')
     [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]
     """
-    for i in range(len(music_string)):
-        if music_string[i] == 'o':
-            music_string = music_string[i:]
-            break
-    return [len(music_string) // 4, len(music_string) // 2, len(music_string) // 4, len(music_string) // 2,
 
-
-    ]
 
 
 
@@ -309,8 +364,6 @@ def how_many_times(string: str, substring: str) -> int:
     >>> how_many_times('aaaa', 'aa')
     3
     """
-    return string.count(substring)
-
 
 
 
@@ -325,11 +378,11 @@ def sort_numbers(numbers: str) -> str:
     >>> sort_numbers('three one five')
     'one three five'
     """
-    return ' '.join(sorted(numbers.split(), key=lambda x: int(x)))
 
 
 
 
+, Tuple
 
 
 def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:
@@ -340,14 +393,6 @@ def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:
     >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])
     (2.0, 2.0)
     """
-    first = numbers[0]
-    second = numbers[1]
-    for i in range(2, len(numbers)):
-        if abs(first - numbers[i]) < abs(second - numbers[i]):
-            second = numbers[i]
-        elif abs(first - numbers[i]) > abs(second - numbers[i]):
-            first = numbers[i]
-    return first, second
 
 
 
@@ -362,9 +407,10 @@ def rescale_to_unit(numbers: List[float]) -> List[float]:
     [0.0, 0.25, 0.5, 0.75, 1.0]
     """
 
-    return [(x - min(numbers)) / (max(numbers) - min(numbers)) for x in numbers]
 
 
+
+, Any
 
 
 def filter_integers(values: List[Any]) -> List[int]:
@@ -374,7 +420,6 @@ def filter_integers(values: List[Any]) -> List[int]:
     >>> filter_integers([1, 2, 3, 'abc', {}, []])
     [1, 2, 3]
     """
-    return list(filter(lambda x: isinstance(x, int), values))
 
 
 
@@ -389,7 +434,7 @@ def strlen(string: str) -> int:
     3
     """
 
-    return len(string)
+
 
 
 
@@ -399,13 +444,6 @@ def largest_divisor(n: int) -> int:
     >>> largest_divisor(15)
     5
     """
-
-
-    for i in range(n, 0, -1):
-        if n % i == 0:
-            return i
-
-
 
 
 
@@ -426,13 +464,6 @@ def factorize(n: int) -> List[int]:
     """
 
 
-    factors = []
-    for i in range(1, n + 1):
-        if n % i == 0:
-            factors.append(i)
-    return factors
-
-
 
 
 
@@ -445,8 +476,6 @@ def remove_duplicates(numbers: List[int]) -> List[int]:
     [1, 3, 4]
     """
 
-    return list(set(numbers))
-
 
 
 
@@ -457,8 +486,6 @@ def flip_case(string: str) -> str:
     >>> flip_case('Hello')
     'hELLO'
     """
-
-    return string.swapcase()
 
 
 
@@ -475,7 +502,7 @@ def concatenate(strings: List[str]) -> str:
     """
 
 
-    return ''.join(strings)
+
 
 
 
@@ -490,7 +517,7 @@ def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
 
 
 
-    return list(filter(lambda x: x.startswith(prefix), strings))
+
 
 
 def get_positive(l: list):
@@ -502,7 +529,7 @@ def get_positive(l: list):
     """
 
 
-    return list(filter(lambda x: x > 0, l))
+
 
 
 
@@ -524,7 +551,7 @@ def is_prime(n):
     False
     """
 
-    return n > 1 and all(n % i for i in range(2, n))
+
 
 
 import math
@@ -550,8 +577,6 @@ def find_zero(xs: list):
     >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3
     1.0
     """
-    for i in range(len(xs)):
-
 
 
 
@@ -567,16 +592,6 @@ def sort_third(l: list):
     >>> sort_third([5, 6, 3, 4, 8, 9, 2])
     [2, 6, 3, 4, 8, 9, 5]
     """
-    l_copy = l.copy()
-    for i in range(len(l_copy)):
-        if i % 3 == 0:
-            continue
-        else:
-            l_copy[i], l_copy[i + 1] = l_copy[i + 1], l_copy[i]
-    return l_copy
-
-
-
 
 
 
@@ -589,7 +604,7 @@ def unique(l: list):
     [0, 2, 3, 5, 9, 123]
     """
 
-    return sorted(list(set(l)))
+
 
 
 
@@ -604,7 +619,7 @@ def max_element(l: list):
 
 
 
-    return max(l)
+
 
 
 def fizz_buzz(n: int):
@@ -617,7 +632,7 @@ def fizz_buzz(n: int):
     3
     """
 
-    return sum(1 for i in range(n) if i % 11 == 7 or i % 13 == 7)
+
 
 
 
@@ -631,12 +646,7 @@ def sort_even(l: list):
     >>> sort_even([5, 6, 3, 4])
     [3, 6, 5, 4]
     """
-    for i in range(len(l)):
-        if i % 2 == 0:
-            continue
-        else:
-            l[i], l[i + 1] = l[i + 1], l[i]
-    return l
+
 
 
 
@@ -657,11 +667,6 @@ def decode_cyclic(s: str):
     """
     takes as input string encoded with encode_cyclic function. Returns decoded string.
     """
-    # split string to groups. Each of length 3.
-    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]
-    # cycle elements in each group. Unless group has fewer elements than 3.
-    groups = [(group[1:] + group[0]) if len(group) == 3 else group for group in groups]
-    return "".join(groups)
 
 
 
@@ -682,8 +687,6 @@ def prime_fib(n: int):
     >>> prime_fib(5)
     89
     """
-    if n == 1:
-        return 2
 
 
 
@@ -2871,6 +2874,35 @@ def find_max(words):
     find_max(["name", "enam", "game"]) == "enam"
     find_max(["aaaaaaa", "bb" ,"cc"]) == ""aaaaaaa"
     """
+    counter = {}
+    for i in words:
+        if i in counter:
+            counter[i] += 1
+        else:
+            counter[i] = 1
+    return max(counter, key=counter.get)
+
+
+
+
+
+def find_max_replace(words):
+    """Write a function that accepts a list of strings.
+    The list contains different words. Return the word with maximum number
+    of unique characters. If multiple strings have maximum number of unique
+    characters, return the one which comes first in lexicographical order.
+
+    find_max_replace(["name", "of", "string"]) == "string"
+    find_max_replace(["name", "enam", "game"]) == "enam"
+    find_max_replace(["aaaaaaa", "bb","cc"]) == "aaaaaaa"
+    """
+    counter = {}
+    for i in words:
+        if i in counter:
+            counter[i] += 1
+        else:
+            counter[i] = 1
+
 
 
 
@@ -2905,8 +2937,17 @@ def eat(number, need, remaining):
 
     Have fun :)
     """
+    assert(0 <= number <= 1000), "Number should be between 0 and 1000"
+    assert(0 <= need <= 1000), "Need should be between 0 and 1000"
+    assert(0 <= remaining <= 1000), "Remaining should be between 0 and 1000"
 
+    eaten = 0
+    left = remaining
+    if left < need:
+        eaten = need - left
+        left = 0
 
+    return [eaten, left]
 
 
 
@@ -2957,11 +2998,6 @@ def solve(s):
 
 
 
-
-
-
-
-
 def string_to_md5(text):
     """
     Given a string 'text', return its md5 hash equivalent string.
@@ -2969,6 +3005,12 @@ def string_to_md5(text):
 
     >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'
     """
+    s = md5(text.encode()).hexdigest()
+
+    if s:
+        return s
+    else:
+        return None
 
 
 
@@ -2986,3 +3028,5 @@ def generate_integers(a, b):
     generate_integers(8, 2) => [2, 4, 6, 8]
     generate_integers(10, 14) => []
     """
+    x = list(range(a, b + 1))
+    return sorted(x, key=lambda x: str(x))
