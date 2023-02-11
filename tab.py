@@ -2,7 +2,7 @@ from typing import List
 
 
 def has_close_elements(numbers: List[float], threshold: float) -> bool:
-    """ Check if in given list of numbers, are any two numbers closer to each other than
+    """Check if in given list of numbers, are any two numbers closer to each other than
     given threshold.
     >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
     False
@@ -18,7 +18,7 @@ def has_close_elements(numbers: List[float], threshold: float) -> bool:
 
 
 def separate_paren_groups(paren_string: str) -> List[str]:
-    """ Input to this function is a string containing multiple groups of nested parentheses. Your goal is to
+    """Input to this function is a string containing multiple groups of nested parentheses. Your goal is to
     separate those group into separate strings and return the list of those.
     Separate groups are balanced (each open brace is properly closed) and not nested within each other
     Ignore any spaces in the input string.
@@ -26,19 +26,9 @@ def separate_paren_groups(paren_string: str) -> List[str]:
     ['()', '(())', '(()())']
     """
 
-    paren_stack = []
-
-
-    for line in paren_string:
-
-
-
-
-
-
 
 def truncate_number(number: float) -> float:
-    """ Given a positive floating point number, it can be decomposed into
+    """Given a positive floating point number, it can be decomposed into
     and integer part (largest integer smaller than given number) and decimals
     (leftover part always smaller than 1).
 
@@ -47,16 +37,9 @@ def truncate_number(number: float) -> float:
     0.5
     """
 
-    
-
-
-
-
-
-
 
 def below_zero(operations: List[int]) -> bool:
-    """ You're given a list of deposit and withdrawal operations on a bank account that starts with
+    """You're given a list of deposit and withdrawal operations on a bank account that starts with
     zero balance. Your task is to detect if at any point the balance of account fallls below zero, and
     at that point function should return True. Otherwise it should return False.
     >>> below_zero([1, 2, 3])
@@ -66,13 +49,8 @@ def below_zero(operations: List[int]) -> bool:
     """
 
 
-
-
-
-
-
 def mean_absolute_deviation(numbers: List[float]) -> float:
-    """ For a given list of input numbers, calculate Mean Absolute Deviation
+    """For a given list of input numbers, calculate Mean Absolute Deviation
     around the mean of this dataset.
     Mean Absolute Deviation is the average absolute difference between each
     element and a centerpoint (mean in this case):
@@ -82,13 +60,8 @@ def mean_absolute_deviation(numbers: List[float]) -> float:
     """
 
 
-
-
-
-
-
 def intersperse(numbers: List[int], delimeter: int) -> List[int]:
-    """ Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+    """Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
     >>> intersperse([], 4)
     []
     >>> intersperse([1, 2, 3], 4)
@@ -96,13 +69,8 @@ def intersperse(numbers: List[int], delimeter: int) -> List[int]:
     """
 
 
-
-
-
-
-
 def parse_nested_parens(paren_string: str) -> List[int]:
-    """ Input to this function is a string represented multiple groups for nested parentheses separated by spaces.
+    """Input to this function is a string represented multiple groups for nested parentheses separated by spaces.
     For each of the group, output the deepest level of nesting of parentheses.
     E.g. (()()) has maximum two levels of nesting while ((())) has three.
 
@@ -111,13 +79,8 @@ def parse_nested_parens(paren_string: str) -> List[int]:
     """
 
 
-
-
-
-
-
 def filter_by_substring(strings: List[str], substring: str) -> List[str]:
-    """ Filter an input list of strings only for ones that contain given substring
+    """Filter an input list of strings only for ones that contain given substring
     >>> filter_by_substring([], 'a')
     []
     >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')
@@ -125,13 +88,8 @@ def filter_by_substring(strings: List[str], substring: str) -> List[str]:
     """
 
 
-
-
-, Tuple
-
-
 def sum_product(numbers: List[int]) -> Tuple[int, int]:
-    """ For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.
+    """For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.
     Empty sum should be equal to 0 and empty product should be equal to 1.
     >>> sum_product([])
     (0, 1)
@@ -140,30 +98,21 @@ def sum_product(numbers: List[int]) -> Tuple[int, int]:
     """
 
 
-
-
-, Tuple
-
-
 def rolling_max(numbers: List[int]) -> List[int]:
-    """ From a given list of integers, generate a list of rolling maximum element found until given moment
+    """From a given list of integers, generate a list of rolling maximum element found until given moment
     in the sequence.
     >>> rolling_max([1, 2, 3, 2, 3, 4, 2])
     [1, 2, 3, 3, 3, 4, 4]
     """
 
 
-
-
-
-
 def is_palindrome(string: str) -> bool:
-    """ Test if given string is a palindrome """
+    """Test if given string is a palindrome"""
     return string == string[::-1]
 
 
 def make_palindrome(string: str) -> str:
-    """ Find the shortest palindrome that begins with a supplied string.
+    """Find the shortest palindrome that begins with a supplied string.
     Algorithm idea is simple:
     - Find the longest postfix of supplied string that is a palindrome.
     - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.
@@ -176,26 +125,16 @@ def make_palindrome(string: str) -> str:
     """
 
 
-
-
-
-
-
 def string_xor(a: str, b: str) -> str:
-    """ Input are two strings a and b consisting only of 1s and 0s.
+    """Input are two strings a and b consisting only of 1s and 0s.
     Perform binary XOR on these inputs and return result also as a string.
     >>> string_xor('010', '110')
     '100'
     """
 
 
-
-
-, Optional
-
-
 def longest(strings: List[str]) -> Optional[str]:
-    """ Out of list of strings, return the longest one. Return the first one in case of multiple
+    """Out of list of strings, return the longest one. Return the first one in case of multiple
     strings of the same length. Return None in case the input list is empty.
     >>> longest([])
 
@@ -206,12 +145,8 @@ def longest(strings: List[str]) -> Optional[str]:
     """
 
 
-
-
-
-
 def greatest_common_divisor(a: int, b: int) -> int:
-    """ Return a greatest common divisor of two integers a and b
+    """Return a greatest common divisor of two integers a and b
     >>> greatest_common_divisor(3, 5)
     1
     >>> greatest_common_divisor(25, 15)
@@ -219,24 +154,15 @@ def greatest_common_divisor(a: int, b: int) -> int:
     """
 
 
-
-
-
-
-
 def all_prefixes(string: str) -> List[str]:
-    """ Return list of all prefixes from shortest to longest of the input string
+    """Return list of all prefixes from shortest to longest of the input string
     >>> all_prefixes('abc')
     ['a', 'ab', 'abc']
     """
 
 
-
-
-
-
 def string_sequence(n: int) -> str:
-    """ Return a string containing space-delimited numbers starting from 0 upto n inclusive.
+    """Return a string containing space-delimited numbers starting from 0 upto n inclusive.
     >>> string_sequence(0)
     '0'
     >>> string_sequence(5)
@@ -244,12 +170,8 @@ def string_sequence(n: int) -> str:
     """
 
 
-
-
-
-
 def count_distinct_characters(string: str) -> int:
-    """ Given a string, find out how many distinct characters (regardless of case) does it consist of
+    """Given a string, find out how many distinct characters (regardless of case) does it consist of
     >>> count_distinct_characters('xyzXYZ')
     3
     >>> count_distinct_characters('Jerry')
@@ -257,13 +179,8 @@ def count_distinct_characters(string: str) -> int:
     """
 
 
-
-
-
-
-
 def parse_music(music_string: str) -> List[int]:
-    """ Input to this function is a string representing musical notes in a special ASCII format.
+    """Input to this function is a string representing musical notes in a special ASCII format.
     Your task is to parse this string and return list of integers corresponding to how many beats does each
     not last.
 
@@ -277,12 +194,8 @@ def parse_music(music_string: str) -> List[int]:
     """
 
 
-
-
-
-
 def how_many_times(string: str, substring: str) -> int:
-    """ Find how many times a given substring can be found in the original string. Count overlaping cases.
+    """Find how many times a given substring can be found in the original string. Count overlaping cases.
     >>> how_many_times('', 'a')
     0
     >>> how_many_times('aaa', 'a')
@@ -292,13 +205,8 @@ def how_many_times(string: str, substring: str) -> int:
     """
 
 
-
-
-
-
-
 def sort_numbers(numbers: str) -> str:
-    """ Input is a space-delimited string of numberals from 'zero' to 'nine'.
+    """Input is a space-delimited string of numberals from 'zero' to 'nine'.
     Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.
     Return the string with numbers sorted from smallest to largest
     >>> sort_numbers('three one five')
@@ -306,13 +214,8 @@ def sort_numbers(numbers: str) -> str:
     """
 
 
-
-
-, Tuple
-
-
 def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:
-    """ From a supplied list of numbers (of length at least two) select and return two that are the closest to each
+    """From a supplied list of numbers (of length at least two) select and return two that are the closest to each
     other and return them in order (smaller number, larger number).
     >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])
     (2.0, 2.2)
@@ -321,26 +224,16 @@ def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:
     """
 
 
-
-
-
-
-
 def rescale_to_unit(numbers: List[float]) -> List[float]:
-    """ Given list of numbers (of at least two elements), apply a linear transform to that list,
+    """Given list of numbers (of at least two elements), apply a linear transform to that list,
     such that the smallest number will become 0 and the largest will become 1
     >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])
     [0.0, 0.25, 0.5, 0.75, 1.0]
     """
 
 
-
-
-, Any
-
-
 def filter_integers(values: List[Any]) -> List[int]:
-    """ Filter given list of any python values only for integers
+    """Filter given list of any python values only for integers
     >>> filter_integers(['a', 3.14, 5])
     [5]
     >>> filter_integers([1, 2, 3, 'abc', {}, []])
@@ -348,12 +241,8 @@ def filter_integers(values: List[Any]) -> List[int]:
     """
 
 
-
-
-
-
 def strlen(string: str) -> int:
-    """ Return length of given string
+    """Return length of given string
     >>> strlen('')
     0
     >>> strlen('abc')
@@ -361,24 +250,15 @@ def strlen(string: str) -> int:
     """
 
 
-
-
-
-
 def largest_divisor(n: int) -> int:
-    """ For a given number n, find the largest number that divides n evenly, smaller than n
+    """For a given number n, find the largest number that divides n evenly, smaller than n
     >>> largest_divisor(15)
     5
     """
 
 
-
-
-
-
-
 def factorize(n: int) -> List[int]:
-    """ Return list of prime factors of given integer in the order from smallest to largest.
+    """Return list of prime factors of given integer in the order from smallest to largest.
     Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.
     Input number should be equal to the product of all factors
     >>> factorize(8)
@@ -390,37 +270,23 @@ def factorize(n: int) -> List[int]:
     """
 
 
-
-
-
-
-
 def remove_duplicates(numbers: List[int]) -> List[int]:
-    """ From a list of integers, remove all elements that occur more than once.
+    """From a list of integers, remove all elements that occur more than once.
     Keep order of elements left the same as in the input.
     >>> remove_duplicates([1, 2, 3, 2, 4])
     [1, 3, 4]
     """
 
 
-
-
-
-
 def flip_case(string: str) -> str:
-    """ For a given string, flip lowercase characters to uppercase and uppercase to lowercase.
+    """For a given string, flip lowercase characters to uppercase and uppercase to lowercase.
     >>> flip_case('Hello')
     'hELLO'
     """
 
 
-
-
-
-
-
 def concatenate(strings: List[str]) -> str:
-    """ Concatenate list of strings into a single string
+    """Concatenate list of strings into a single string
     >>> concatenate([])
     ''
     >>> concatenate(['a', 'b', 'c'])
@@ -428,22 +294,13 @@ def concatenate(strings: List[str]) -> str:
     """
 
 
-
-
-
-
-
 def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
-    """ Filter an input list of strings only for ones that start with a given prefix.
+    """Filter an input list of strings only for ones that start with a given prefix.
     >>> filter_by_prefix([], 'a')
     []
     >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')
     ['abc', 'array']
     """
-
-
-
-
 
 
 def get_positive(l: list):
@@ -453,10 +310,6 @@ def get_positive(l: list):
     >>> get_positive([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])
     [5, 3, 2, 3, 9, 123, 1]
     """
-
-
-
-
 
 
 def is_prime(n):
@@ -478,8 +331,6 @@ def is_prime(n):
     """
 
 
-
-
 import math
 
 
@@ -492,7 +343,7 @@ def poly(xs: list, x: float):
 
 
 def find_zero(xs: list):
-    """ xs are coefficients of a polynomial.
+    """xs are coefficients of a polynomial.
     find_zero find x such that poly(x) = 0.
     find_zero returns only only zero point, even if there are many.
     Moreover, find_zero only takes list xs having even number of coefficients
@@ -503,10 +354,6 @@ def find_zero(xs: list):
     >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3
     1.0
     """
-
-
-
-
 
 
 def sort_third(l: list):
@@ -520,19 +367,11 @@ def sort_third(l: list):
     """
 
 
-
-
-
-
 def unique(l: list):
     """Return sorted unique elements in a list
     >>> unique([5, 3, 5, 2, 3, 3, 9, 0, 123])
     [0, 2, 3, 5, 9, 123]
     """
-
-
-
-
 
 
 def max_element(l: list):
@@ -542,10 +381,6 @@ def max_element(l: list):
     >>> max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])
     123
     """
-
-
-
-
 
 
 def fizz_buzz(n: int):
@@ -559,10 +394,6 @@ def fizz_buzz(n: int):
     """
 
 
-
-
-
-
 def sort_even(l: list):
     """This function takes a list l and returns a list l' such that
     l' is identical to l in the odd indicies, while its values at the even indicies are equal
@@ -574,16 +405,12 @@ def sort_even(l: list):
     """
 
 
-
-
-
-
 def encode_cyclic(s: str):
     """
     returns encoded string by cycling groups of three characters.
     """
     # split string to groups. Each of length 3.
-    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]
+    groups = [s[(3 * i) : min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]
     # cycle elements in each group. Unless group has fewer elements than 3.
     groups = [(group[1:] + group[0]) if len(group) == 3 else group for group in groups]
     return "".join(groups)
@@ -593,10 +420,6 @@ def decode_cyclic(s: str):
     """
     takes as input string encoded with encode_cyclic function. Returns decoded string.
     """
-
-
-
-
 
 
 def prime_fib(n: int):
@@ -613,10 +436,6 @@ def prime_fib(n: int):
     >>> prime_fib(5)
     89
     """
-
-
-
-
 
 
 def triples_sum_to_zero(l: list):
@@ -638,10 +457,6 @@ def triples_sum_to_zero(l: list):
     """
 
 
-
-
-
-
 def car_race_collision(n: int):
     """
     Imagine a road that's a perfectly straight infinitely long line.
@@ -656,10 +471,6 @@ def car_race_collision(n: int):
     """
 
 
-
-
-
-
 def incr_list(l: list):
     """Return list with elements incremented by 1.
     >>> incr_list([1, 2, 3])
@@ -667,10 +478,6 @@ def incr_list(l: list):
     >>> incr_list([5, 3, 5, 2, 3, 3, 9, 0, 123])
     [6, 4, 6, 3, 4, 4, 10, 1, 124]
     """
-
-
-
-
 
 
 def pairs_sum_to_zero(l):
@@ -691,10 +498,6 @@ def pairs_sum_to_zero(l):
     """
 
 
-
-
-
-
 def change_base(x: int, base: int):
     """Change numerical base of input number x to base.
     return string representation after the conversion.
@@ -708,19 +511,11 @@ def change_base(x: int, base: int):
     """
 
 
-
-
-
-
 def triangle_area(a, h):
     """Given length of a side and high return area for a triangle.
     >>> triangle_area(5, 3)
     7.5
     """
-
-
-
-
 
 
 def fib4(n: int):
@@ -740,10 +535,6 @@ def fib4(n: int):
     """
 
 
-
-
-
-
 def median(l: list):
     """Return median of elements in the list l.
     >>> median([3, 1, 2, 4, 5])
@@ -751,10 +542,6 @@ def median(l: list):
     >>> median([-10, 4, 6, 1000, 10, 20])
     15.0
     """
-
-
-
-
 
 
 def is_palindrome(text: str):
@@ -769,10 +556,6 @@ def is_palindrome(text: str):
     >>> is_palindrome('zbcd')
     False
     """
-
-
-
-
 
 
 def modp(n: int, p: int):
@@ -790,10 +573,6 @@ def modp(n: int, p: int):
     """
 
 
-
-
-
-
 def encode_shift(s: str):
     """
     returns encoded string by shifting every character by 5 in the alphabet.
@@ -805,10 +584,6 @@ def decode_shift(s: str):
     """
     takes as input string encoded with encode_shift function. Returns decoded string.
     """
-
-
-
-
 
 
 def remove_vowels(text):
@@ -829,10 +604,6 @@ def remove_vowels(text):
     """
 
 
-
-
-
-
 def below_threshold(l: list, t: int):
     """Return True if all numbers in the list l are below threshold t.
     >>> below_threshold([1, 2, 4, 10], 100)
@@ -842,10 +613,6 @@ def below_threshold(l: list, t: int):
     """
 
 
-
-
-
-
 def add(x: int, y: int):
     """Add two numbers x and y
     >>> add(2, 3)
@@ -853,10 +620,6 @@ def add(x: int, y: int):
     >>> add(5, 7)
     12
     """
-
-
-
-
 
 
 def same_chars(s0: str, s1: str):
@@ -877,10 +640,6 @@ def same_chars(s0: str, s1: str):
     """
 
 
-
-
-
-
 def fib(n: int):
     """Return n-th Fibonacci number.
     >>> fib(10)
@@ -892,12 +651,8 @@ def fib(n: int):
     """
 
 
-
-
-
-
 def correct_bracketing(brackets: str):
-    """ brackets is a string of "<" and ">".
+    """brackets is a string of "<" and ">".
     return True if every opening bracket has a corresponding closing bracket.
 
     >>> correct_bracketing("<")
@@ -911,10 +666,6 @@ def correct_bracketing(brackets: str):
     """
 
 
-
-
-
-
 def monotonic(l: list):
     """Return True is list elements are monotonically increasing or decreasing.
     >>> monotonic([1, 2, 4, 20])
@@ -924,10 +675,6 @@ def monotonic(l: list):
     >>> monotonic([4, 1, 0, -10])
     True
     """
-
-
-
-
 
 
 def common(l1: list, l2: list):
@@ -940,10 +687,6 @@ def common(l1: list, l2: list):
     """
 
 
-
-
-
-
 def largest_prime_factor(n: int):
     """Return the largest prime factor of n. Assume n > 1 and is not a prime.
     >>> largest_prime_factor(13195)
@@ -951,10 +694,6 @@ def largest_prime_factor(n: int):
     >>> largest_prime_factor(2048)
     2
     """
-
-
-
-
 
 
 def sum_to_n(n: int):
@@ -972,12 +711,8 @@ def sum_to_n(n: int):
     """
 
 
-
-
-
-
 def correct_bracketing(brackets: str):
-    """ brackets is a string of "(" and ")".
+    """brackets is a string of "(" and ")".
     return True if every opening bracket has a corresponding closing bracket.
 
     >>> correct_bracketing("(")
@@ -991,12 +726,8 @@ def correct_bracketing(brackets: str):
     """
 
 
-
-
-
-
 def derivative(xs: list):
-    """ xs represent coefficients of a polynomial.
+    """xs represent coefficients of a polynomial.
     xs[0] + xs[1] * x + xs[2] * x^2 + ....
      Return derivative of this polynomial in the same form.
     >>> derivative([3, 1, 2, 4, 5])
@@ -1004,10 +735,6 @@ def derivative(xs: list):
     >>> derivative([1, 2, 3])
     [2, 6]
     """
-
-
-
-
 
 
 def fibfib(n: int):
@@ -1026,12 +753,10 @@ def fibfib(n: int):
     """
 
 
-
-
-
 FIX = """
 Add more test cases.
 """
+
 
 def vowels_count(s):
     """Write a function vowels_count which takes a string representing
@@ -1047,9 +772,6 @@ def vowels_count(s):
     """
 
 
-
-
-
 def circular_shift(x, shift):
     """Circular shift the digits of the integer x, shift the digits right by shift
     and return the result as a string.
@@ -1059,9 +781,6 @@ def circular_shift(x, shift):
     >>> circular_shift(12, 2)
     "12"
     """
-
-
-
 
 
 def digitSum(s):
@@ -1079,10 +798,7 @@ def digitSum(s):
     """
 
 
-
-
-
-def fruit_distribution(s,n):
+def fruit_distribution(s, n):
     """
     In this task, you will be given a string that represents a number of apples and oranges
     that are distributed in a basket of fruit this basket contains
@@ -1095,9 +811,6 @@ def fruit_distribution(s,n):
     fruit_distribution("2 apples and 3 oranges", 100) -> 100 - 2 - 3 = 95
     fruit_distribution("100 apples and 1 oranges",120) -> 120 - 100 - 1 = 19
     """
-
-
-
 
 
 def pluck(arr):
@@ -1136,11 +849,8 @@ def pluck(arr):
     """
 
 
-
-
-
 def search(lst):
-    '''
+    """
     You are given a non-empty list of positive integers. Return the greatest integer that is greater than
     zero, and has a frequency greater than or equal to the value of the integer itself.
     The frequency of an integer is the number of times it appears in the list.
@@ -1149,14 +859,11 @@ def search(lst):
         search([4, 1, 2, 2, 3, 1]) == 2
         search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3
         search([5, 5, 4, 4, 4]) == -1
-    '''
-
-
-
+    """
 
 
 def strange_sort_list(lst):
-    '''
+    """
     Given list of integers, return list in strange order.
     Strange sorting, is when you start with the minimum value,
     then maximum of the remaining integers, then minimum and so on.
@@ -1165,14 +872,11 @@ def strange_sort_list(lst):
     strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]
     strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]
     strange_sort_list([]) == []
-    '''
-
-
-
+    """
 
 
 def triangle_area(a, b, c):
-    '''
+    """
     Given the lengths of the three sides of a triangle. Return the area of
     the triangle rounded to 2 decimal points if the three sides form a valid triangle.
     Otherwise return -1
@@ -1181,14 +885,11 @@ def triangle_area(a, b, c):
     Example:
     triangle_area(3, 4, 5) == 6.00
     triangle_area(1, 2, 10) == -1
-    '''
+    """
 
 
-
-
-
-def will_it_fly(q,w):
-    '''
+def will_it_fly(q, w):
+    """
     Write a function that returns True if the object q will fly, and False otherwise.
     The object q will fly if it's balanced (it is a palindromic list) and the sum of its elements is less than or equal the maximum possible weight w.
 
@@ -1204,10 +905,7 @@ def will_it_fly(q,w):
 
     will_it_fly([3], 5) ➞ True
     # 3 is less than the maximum possible weight, and it's balanced.
-    '''
-
-
-
+    """
 
 
 def smallest_change(arr):
@@ -1223,11 +921,8 @@ def smallest_change(arr):
     """
 
 
-
-
-
 def total_match(lst1, lst2):
-    '''
+    """
     Write a function that accepts two lists of strings and returns the list that has
     total number of chars in the all strings of the list less than the other list.
 
@@ -1239,10 +934,7 @@ def total_match(lst1, lst2):
     total_match(['hi', 'admin'], ['hi', 'hi', 'admin', 'project']) ➞ ['hi', 'admin']
     total_match(['hi', 'admin'], ['hI', 'hi', 'hi']) ➞ ['hI', 'hi', 'hi']
     total_match(['4'], ['1', '2', '3', '4', '5']) ➞ ['4']
-    '''
-
-
-
+    """
 
 
 def is_multiply_prime(a):
@@ -1253,9 +945,6 @@ def is_multiply_prime(a):
     is_multiply_prime(30) == True
     30 = 2 * 3 * 5
     """
-
-
-
 
 
 def is_simple_power(x, n):
@@ -1272,11 +961,8 @@ def is_simple_power(x, n):
     """
 
 
-
-
-
 def iscube(a):
-    '''
+    """
     Write a function that takes an integer a and returns True
     if this ingeger is a cube of some integer number.
     Note: you may assume the input is always valid.
@@ -1287,10 +973,7 @@ def iscube(a):
     iscube(64) ==> True
     iscube(0) ==> True
     iscube(180) ==> False
-    '''
-
-
-
+    """
 
 
 def hex_key(num):
@@ -1313,9 +996,6 @@ def hex_key(num):
     """
 
 
-
-
-
 def decimal_to_binary(decimal):
     """You will be given a number in decimal form and your task is to convert it to
     binary format. The function should return a string, with each character representing a binary
@@ -1330,9 +1010,6 @@ def decimal_to_binary(decimal):
     """
 
 
-
-
-
 def is_happy(s):
     """You are given a string s.
     Your task is to check if the string is happy or not.
@@ -1345,9 +1022,6 @@ def is_happy(s):
     is_happy(adb) => True
     is_happy(xyy) => False
     """
-
-
-
 
 
 def numerical_letter_grade(grades):
@@ -1377,9 +1051,6 @@ def numerical_letter_grade(grades):
     """
 
 
-
-
-
 def prime_length(string):
     """Write a function that takes a string and returns True if the string
     length is a prime number or False otherwise
@@ -1391,17 +1062,11 @@ def prime_length(string):
     """
 
 
-
-
-
 def starts_one_ends(n):
     """
     Given a positive integer n, return the count of the numbers of n-digit
     positive integers that start or end with 1.
     """
-
-
-
 
 
 def solve(N):
@@ -1420,9 +1085,6 @@ def solve(N):
     """
 
 
-
-
-
 def add(lst):
     """Given a non-empty list of integers lst. add the even elements that are at odd indices..
 
@@ -1430,9 +1092,6 @@ def add(lst):
     Examples:
         add([4, 2, 6, 7]) ==> 2
     """
-
-
-
 
 
 def anti_shuffle(s):
@@ -1448,9 +1107,6 @@ def anti_shuffle(s):
     anti_shuffle('hello') returns 'ehllo'
     anti_shuffle('Hello World!!!') returns 'Hello !!!Wdlor'
     """
-
-
-
 
 
 def get_row(lst, x):
@@ -1475,9 +1131,6 @@ def get_row(lst, x):
     """
 
 
-
-
-
 def sort_array(array):
     """
     Given an array of non-negative integers, return a copy of the given array after sorting,
@@ -1495,9 +1148,6 @@ def sort_array(array):
     """
 
 
-
-
-
 def encrypt(s):
     """Create a function encrypt that takes a string as an argument and
     returns a string encrypted with the alphabet being rotated.
@@ -1511,9 +1161,6 @@ def encrypt(s):
     """
 
 
-
-
-
 def next_smallest(lst):
     """
     You are given a list of integers.
@@ -1525,9 +1172,6 @@ def next_smallest(lst):
     next_smallest([]) == None
     next_smallest([1, 1]) == None
     """
-
-
-
 
 
 def is_bored(S):
@@ -1544,11 +1188,8 @@ def is_bored(S):
     """
 
 
-
-
-
 def any_int(x, y, z):
-    '''
+    """
     Create a function that takes 3 numbers.
     Returns true if one of the numbers is equal to the sum of the other two, and all numbers are integers.
     Returns false in any other cases.
@@ -1564,10 +1205,7 @@ def any_int(x, y, z):
 
 
 
-    '''
-
-
-
+    """
 
 
 def encode(message):
@@ -1586,10 +1224,6 @@ def encode(message):
     """
 
 
-
-
-
-
 def skjkasdkd(lst):
     """You are given a list of integers.
     You need to find the largest prime value and return the sum of its digits.
@@ -1602,9 +1236,6 @@ def skjkasdkd(lst):
     For lst = [0,81,12,3,1,21] the output should be 3
     For lst = [0,8,1,2,1,7] the output should be 7
     """
-
-
-
 
 
 def check_dict_case(dict):
@@ -1621,9 +1252,6 @@ def check_dict_case(dict):
     """
 
 
-
-
-
 def count_up_to(n):
     """Implement a function that takes an non-negative integer and returns an array of the first n
     integers that are prime numbers and less than n.
@@ -1635,9 +1263,6 @@ def count_up_to(n):
     count_up_to(1) => []
     count_up_to(18) => [2,3,5,7,11,13,17]
     """
-
-
-
 
 
 def multiply(a, b):
@@ -1652,9 +1277,6 @@ def multiply(a, b):
     """
 
 
-
-
-
 def count_upper(s):
     """
     Given a string s, count the number of uppercase vowels in even indices.
@@ -1666,11 +1288,8 @@ def count_upper(s):
     """
 
 
-
-
-
 def closest_integer(value):
-    '''
+    """
     Create a function that takes a value (string) representing a number
     and returns the closest integer to it. If the number is equidistant
     from two integers, round it away from zero.
@@ -1686,10 +1305,7 @@ def closest_integer(value):
     from two integers, the one you should return is the one that is the
     farthest from zero. For example closest_integer("14.5") should
     return 15 and closest_integer("-14.5") should return -15.
-    '''
-
-
-
+    """
 
 
 def make_a_pile(n):
@@ -1708,9 +1324,6 @@ def make_a_pile(n):
     """
 
 
-
-
-
 def words_string(s):
     """
     You will be given a string of words separated by commas or spaces. Your task is
@@ -1722,9 +1335,6 @@ def words_string(s):
     """
 
 
-
-
-
 def choose_num(x, y):
     """This function takes two positive numbers x and y and returns the
     biggest even integer number that is in the range [x, y] inclusive. If
@@ -1734,9 +1344,6 @@ def choose_num(x, y):
     choose_num(12, 15) = 14
     choose_num(13, 12) = -1
     """
-
-
-
 
 
 def rounded_avg(n, m):
@@ -1752,9 +1359,6 @@ def rounded_avg(n, m):
     """
 
 
-
-
-
 def unique_digits(x):
     """Given a list of positive integers x. return a sorted list of all
     elements that hasn't any even digit.
@@ -1767,9 +1371,6 @@ def unique_digits(x):
     >>> unique_digits([152, 323, 1422, 10])
     []
     """
-
-
-
 
 
 def by_length(arr):
@@ -1796,11 +1397,8 @@ def by_length(arr):
     """
 
 
-
-
-
 def f(n):
-    """ Implement the function f that takes n as a parameter,
+    """Implement the function f that takes n as a parameter,
     and returns a list of size n, such that the value of the element at index i is the factorial of i if i is even
     or the sum of numbers from 1 to i otherwise.
     i starts from 1.
@@ -1808,9 +1406,6 @@ def f(n):
     Example:
     f(5) == [1, 2, 6, 24, 15]
     """
-
-
-
 
 
 def even_odd_palindrome(n):
@@ -1838,9 +1433,6 @@ def even_odd_palindrome(n):
     """
 
 
-
-
-
 def count_nums(arr):
     """
     Write a function count_nums which takes an array of integers and returns
@@ -1851,9 +1443,6 @@ def count_nums(arr):
     >>> count_nums([-1, 11, -11]) == 1
     >>> count_nums([1, 1, 2]) == 3
     """
-
-
-
 
 
 def move_one_ball(arr):
@@ -1885,9 +1474,6 @@ def move_one_ball(arr):
     """
 
 
-
-
-
 def exchange(lst1, lst2):
     """In this problem, you will implement a function that takes two lists of numbers,
     and determines whether it is possible to perform an exchange of elements
@@ -1901,9 +1487,6 @@ def exchange(lst1, lst2):
     exchange([1, 2, 3, 4], [1, 5, 3, 4]) => "NO"
     It is assumed that the input lists will be non-empty.
     """
-
-
-
 
 
 def histogram(test):
@@ -1921,10 +1504,7 @@ def histogram(test):
     """
 
 
-
-
-
-def reverse_delete(s,c):
+def reverse_delete(s, c):
     """Task
     We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c
     then check if the result string is palindrome.
@@ -1935,9 +1515,6 @@ def reverse_delete(s,c):
     For s = "abcdef", c = "b"  the result should be ('acdef',False)
     For s = "abcdedcba", c = "ab", the result should be ('cdedc',True)
     """
-
-
-
 
 
 def odd_count(lst):
@@ -1954,9 +1531,6 @@ def odd_count(lst):
     """
 
 
-
-
-
 def minSubArraySum(nums):
     """
     Given an array of integers nums, find the minimum sum of any non-empty sub-array
@@ -1967,11 +1541,7 @@ def minSubArraySum(nums):
     """
 
 
-
-
-
 def max_fill(grid, capacity):
-    import math
     """
     You are given a rectangular grid of wells. Each row represents a single well,
     and each 1 in a row represents a single unit of water.
@@ -2007,9 +1577,6 @@ def max_fill(grid, capacity):
     """
 
 
-
-
-
 def sort_array(arr):
     """
     In this Kata, you have to sort an array of non-negative integers according to
@@ -2021,9 +1588,6 @@ def sort_array(arr):
     >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]
     >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]
     """
-
-
-
 
 
 def select_words(s, n):
@@ -2039,9 +1603,6 @@ def select_words(s, n):
     select_words("Hello world", 4) ==> ["world"]
     select_words("Uncle sam", 3) ==> ["Uncle"]
     """
-
-
-
 
 
 def get_closest_vowel(word):
@@ -2061,11 +1622,8 @@ def get_closest_vowel(word):
     """
 
 
-
-
-
 def match_parens(lst):
-    '''
+    """
     You are given a list of two strings, both strings consist of open
     parentheses '(' or close parentheses ')' only.
     Your job is to check if it is possible to concatenate the two strings in
@@ -2078,10 +1636,7 @@ def match_parens(lst):
     Examples:
     match_parens(['()(', ')']) == 'Yes'
     match_parens([')', ')']) == 'No'
-    '''
-
-
-
+    """
 
 
 def maximum(arr, k):
@@ -2111,9 +1666,6 @@ def maximum(arr, k):
     """
 
 
-
-
-
 def solution(lst):
     """Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.
 
@@ -2123,9 +1675,6 @@ def solution(lst):
     solution([3, 3, 3, 3, 3]) ==> 9
     solution([30, 13, 24, 321]) ==>0
     """
-
-
-
 
 
 def add_elements(arr, k):
@@ -2142,9 +1691,6 @@ def add_elements(arr, k):
         1. 1 <= len(arr) <= 100
         2. 1 <= k <= len(arr)
     """
-
-
-
 
 
 def get_odd_collatz(n):
@@ -2164,9 +1710,6 @@ def get_odd_collatz(n):
     For example:
     get_odd_collatz(5) returns [1, 5] # The collatz sequence for 5 is [5, 16, 8, 4, 2, 1], so the odd numbers are only 1, and 5.
     """
-
-
-
 
 
 def valid_date(date):
@@ -2191,11 +1734,8 @@ def valid_date(date):
     """
 
 
-
-
-
 def split_words(txt):
-    '''
+    """
     Given a string of words, return a list of words split on whitespace, if no whitespaces exists in the text you
     should split on commas ',' if no commas exists you should return the number of lower-case letters with odd order in the
     alphabet, ord('a') = 0, ord('b') = 1, ... ord('z') = 25
@@ -2203,14 +1743,11 @@ def split_words(txt):
     split_words("Hello world!") ➞ ["Hello", "world!"]
     split_words("Hello,world!") ➞ ["Hello", "world!"]
     split_words("abcdef") == 3
-    '''
-
-
-
+    """
 
 
 def is_sorted(lst):
-    '''
+    """
     Given a list of numbers, return whether or not they are sorted
     in ascending order. If list has more than 1 duplicate of the same
     number, return False. Assume no negative numbers and only integers.
@@ -2224,10 +1761,7 @@ def is_sorted(lst):
     is_sorted([1, 3, 2, 4, 5, 6, 7]) ➞ False
     is_sorted([1, 2, 2, 3, 3, 4]) ➞ True
     is_sorted([1, 2, 2, 2, 3, 4]) ➞ False
-    '''
-
-
-
+    """
 
 
 def intersection(interval1, interval2):
@@ -2252,9 +1786,6 @@ def intersection(interval1, interval2):
     """
 
 
-
-
-
 def prod_signs(arr):
     """
     You are given an array arr of integers and you need to return
@@ -2267,9 +1798,6 @@ def prod_signs(arr):
     >>> prod_signs([0, 1]) == 0
     >>> prod_signs([]) == None
     """
-
-
-
 
 
 def minPath(grid, k):
@@ -2304,9 +1832,6 @@ def minPath(grid, k):
     """
 
 
-
-
-
 def tri(n):
     """Everyone knows Fibonacci sequence, it was studied deeply by mathematicians in
     the last couple centuries. However, what people don't know is Tribonacci sequence.
@@ -2326,9 +1851,6 @@ def tri(n):
     """
 
 
-
-
-
 def digits(n):
     """Given a positive integer n, return the product of the odd digits.
     Return 0 if all digits are even.
@@ -2339,11 +1861,8 @@ def digits(n):
     """
 
 
-
-
-
 def is_nested(string):
-    '''
+    """
     Create a function that takes a string as input which contains only square brackets.
     The function should return True if and only if there is a valid subsequence of brackets
     where at least one bracket in the subsequence is nested.
@@ -2354,11 +1873,7 @@ def is_nested(string):
     is_nested('[]') ➞ False
     is_nested('[[][]]') ➞ True
     is_nested('[[]][[') ➞ True
-    '''
-
-
-
-
+    """
 
 
 def sum_squares(lst):
@@ -2376,11 +1891,8 @@ def sum_squares(lst):
     """
 
 
-
-
-
 def check_if_last_char_is_a_letter(txt):
-    '''
+    """
     Create a function that returns True if the last character
     of a given string is an alphabetical character and is not
     a part of a word, and False otherwise.
@@ -2391,10 +1903,7 @@ def check_if_last_char_is_a_letter(txt):
     check_if_last_char_is_a_letter("apple pi e") ➞ True
     check_if_last_char_is_a_letter("apple pi e ") ➞ False
     check_if_last_char_is_a_letter("") ➞ False
-    '''
-
-
-
+    """
 
 
 def can_arrange(arr):
@@ -2409,11 +1918,8 @@ def can_arrange(arr):
     """
 
 
-
-
-
 def largest_smallest_integers(lst):
-    '''
+    """
     Create a function that returns a tuple (a, b), where 'a' is
     the largest of negative integers, and 'b' is the smallest
     of positive integers in a list.
@@ -2423,10 +1929,7 @@ def largest_smallest_integers(lst):
     largest_smallest_integers([2, 4, 1, 3, 5, 7]) == (None, 1)
     largest_smallest_integers([]) == (None, None)
     largest_smallest_integers([0]) == (None, None)
-    '''
-
-
-
+    """
 
 
 def compare_one(a, b):
@@ -2443,9 +1946,6 @@ def compare_one(a, b):
     """
 
 
-
-
-
 def is_equal_to_sum_even(n):
     """Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers
     Example
@@ -2453,9 +1953,6 @@ def is_equal_to_sum_even(n):
     is_equal_to_sum_even(6) == False
     is_equal_to_sum_even(8) == True
     """
-
-
-
 
 
 def special_factorial(n):
@@ -2472,9 +1969,6 @@ def special_factorial(n):
     """
 
 
-
-
-
 def fix_spaces(text):
     """
     Given a string text, replace all spaces in it with underscores,
@@ -2486,9 +1980,6 @@ def fix_spaces(text):
     fix_spaces(" Example 2") == "_Example_2"
     fix_spaces(" Example   3") == "_Example-3"
     """
-
-
-
 
 
 def file_name_check(file_name):
@@ -2507,13 +1998,8 @@ def file_name_check(file_name):
     """
 
 
-
-
-
-
-
 def sum_squares(lst):
-    """"
+    """ "
     This function will take a list of integers. For all entries in the list, the function shall square the integer entry if its index is a
     multiple of 3 and will cube the integer entry if its index is a multiple of 4 and not a multiple of 3. The function will not
     change the entries in the list whose indexes are not a multiple of 3 or 4. The function shall then return the sum of all entries.
@@ -2523,9 +2009,6 @@ def sum_squares(lst):
     For lst = []  the output should be 0
     For lst = [-1,-5,2,-1,-5]  the output should be -126
     """
-
-
-
 
 
 def words_in_sentence(sentence):
@@ -2550,9 +2033,6 @@ def words_in_sentence(sentence):
     """
 
 
-
-
-
 def simplify(x, n):
     """Your task is to implement a function that will simplify the expression
     x * n. The function returns True if x * n evaluates to a whole number and False
@@ -2565,9 +2045,6 @@ def simplify(x, n):
     simplify("1/6", "2/1") = False
     simplify("7/10", "10/2") = False
     """
-
-
-
 
 
 def order_by_points(nums):
@@ -2583,9 +2060,6 @@ def order_by_points(nums):
     """
 
 
-
-
-
 def specialFilter(nums):
     """Write a function that takes an array of numbers as input and returns
     the number of elements in the array that are greater than 10 and both
@@ -2594,9 +2068,6 @@ def specialFilter(nums):
     specialFilter([15, -73, 14, -15]) => 1
     specialFilter([33, -2, -3, 45, 21, 109]) => 2
     """
-
-
-
 
 
 def get_max_triples(n):
@@ -2615,11 +2086,8 @@ def get_max_triples(n):
     """
 
 
-
-
-
 def bf(planet1, planet2):
-    '''
+    """
     There are eight planets in our solar system: the closerst to the Sun
     is Mercury, the next one is Venus, then Earth, Mars, Jupiter, Saturn,
     Uranus, Neptune.
@@ -2633,10 +2101,7 @@ def bf(planet1, planet2):
     bf("Jupiter", "Neptune") ==> ("Saturn", "Uranus")
     bf("Earth", "Mercury") ==> ("Venus")
     bf("Mercury", "Uranus") ==> ("Venus", "Earth", "Mars", "Jupiter", "Saturn")
-    '''
-
-
-
+    """
 
 
 def sorted_list_sum(lst):
@@ -2656,9 +2121,6 @@ def sorted_list_sum(lst):
     """
 
 
-
-
-
 def x_or_y(n, x, y):
     """A simple program which should return the value of x if n is
     a prime number and should return the value of y otherwise.
@@ -2670,11 +2132,8 @@ def x_or_y(n, x, y):
     """
 
 
-
-
-
 def double_the_difference(lst):
-    '''
+    """
     Given a list of numbers, return the sum of squares of the numbers
     in the list that are odd. Ignore numbers that are negative or not integers.
 
@@ -2684,13 +2143,10 @@ def double_the_difference(lst):
     double_the_difference([0]) == 0
 
     If the input list is empty, return 0.
-    '''
+    """
 
 
-
-
-
-def compare(game,guess):
+def compare(game, guess):
     """I think we all remember that feeling when the result of some long-awaited
     event is finally known. The feelings and thoughts you have at that moment are
     definitely worth noting down and comparing.
@@ -2705,9 +2161,6 @@ def compare(game,guess):
     compare([1,2,3,4,5,1],[1,2,3,4,2,-2]) -> [0,0,0,0,3,3]
     compare([0,5,0,0,0,4],[4,1,1,0,0,-2]) -> [4,4,1,0,0,6]
     """
-
-
-
 
 
 def Strongest_Extension(class_name, extensions):
@@ -2729,10 +2182,7 @@ def Strongest_Extension(class_name, extensions):
     """
 
 
-
-
-
-def cycpattern_check(a , b):
+def cycpattern_check(a, b):
     """You are given 2 words. You need to return True if the second word or any of its rotations is a substring in the first word
     cycpattern_check("abcd","abd") => False
     cycpattern_check("hello","ell") => True
@@ -2744,19 +2194,13 @@ def cycpattern_check(a , b):
     """
 
 
-
-
-
 def even_odd_count(num):
     """Given an integer. return a tuple that has the number of even and odd digits respectively.
 
-     Example:
-        even_odd_count(-12) ==> (1, 1)
-        even_odd_count(123) ==> (1, 2)
+    Example:
+       even_odd_count(-12) ==> (1, 1)
+       even_odd_count(123) ==> (1, 2)
     """
-
-
-
 
 
 def int_to_mini_roman(number):
@@ -2772,11 +2216,8 @@ def int_to_mini_roman(number):
     """
 
 
-
-
-
 def right_angle_triangle(a, b, c):
-    '''
+    """
     Given the lengths of the three sides of a triangle. Return True if the three
     sides form a right-angled triangle, False otherwise.
     A right-angled triangle is a triangle in which one angle is right angle or
@@ -2784,10 +2225,7 @@ def right_angle_triangle(a, b, c):
     Example:
     right_angle_triangle(3, 4, 5) == True
     right_angle_triangle(1, 2, 3) == False
-    '''
-
-
-
+    """
 
 
 def find_max(words):
@@ -2809,9 +2247,6 @@ def find_max(words):
     return max(counter, key=counter.get)
 
 
-
-
-
 def find_max_replace(words):
     """Write a function that accepts a list of strings.
     The list contains different words. Return the word with maximum number
@@ -2828,10 +2263,6 @@ def find_max_replace(words):
             counter[i] += 1
         else:
             counter[i] = 1
-
-
-
-
 
 
 def eat(number, need, remaining):
@@ -2863,9 +2294,9 @@ def eat(number, need, remaining):
 
     Have fun :)
     """
-    assert(0 <= number <= 1000), "Number should be between 0 and 1000"
-    assert(0 <= need <= 1000), "Need should be between 0 and 1000"
-    assert(0 <= remaining <= 1000), "Remaining should be between 0 and 1000"
+    assert 0 <= number <= 1000, "Number should be between 0 and 1000"
+    assert 0 <= need <= 1000, "Need should be between 0 and 1000"
+    assert 0 <= remaining <= 1000, "Remaining should be between 0 and 1000"
 
     eaten = 0
     left = remaining
@@ -2874,8 +2305,6 @@ def eat(number, need, remaining):
         left = 0
 
     return [eaten, left]
-
-
 
 
 def do_algebra(operator, operand):
@@ -2905,9 +2334,6 @@ def do_algebra(operator, operand):
     """
 
 
-
-
-
 def solve(s):
     """You are given a string s.
     if s[i] is a letter, reverse its case from lower to upper or vise versa,
@@ -2919,9 +2345,6 @@ def solve(s):
     solve("ab") = "AB"
     solve("#a@C") = "#A@c"
     """
-
-
-
 
 
 def string_to_md5(text):
@@ -2937,11 +2360,6 @@ def string_to_md5(text):
         return s
     else:
         return None
-
-
-
-
-
 
 
 def generate_integers(a, b):

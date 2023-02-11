@@ -121,10 +121,8 @@ def string_sequence(n: int) -> str:
     return " ".join(str(i) for i in range(n + 1))
 
 
-
-
 def parse_music(music_string: str) -> List[int]:
-    """ Input to this function is a string representing musical notes in a special ASCII format.
+    """Input to this function is a string representing musical notes in a special ASCII format.
     Your task is to parse this string and return list of integers corresponding to how many beats does each
     not last.
 
@@ -136,5 +134,3 @@ def parse_music(music_string: str) -> List[int]:
     >>> parse_music('o o| .| o| o| .| .| .| .| o o')
     [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]
     """
-
-
